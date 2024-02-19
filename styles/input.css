@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@layer components {
+  .container90 {
+    @apply lg:container w-[90%] mx-auto;
+  }
+  .green-btn-style {
+    @apply bg-primaryGreen text-white text-lg font-medium font-inter rounded-xl py-3 px-5;
+  }
+  .seat-btn-style {
+    @apply bg-[#F7F8F8] text-black/55 text-lg font-medium font-inter rounded-xl border-2 border-primaryGreen py-3 px-5;
+  }
+}
+@tailwind utilities;
+@layer utilities {
+  .booked-btn-style{
+    border-radius: 0.75rem;
+    border-width: 2px;
+    border-color: rgb(29, 209, 0);
+    background-color: rgb(29, 209, 0);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    font-family: Inter;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255)
+  }
+}
