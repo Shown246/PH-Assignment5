@@ -16,7 +16,6 @@ for (const btn of buttons) {
       btn.classList.remove("selected");
       btn.classList.toggle("seat-btn-style");
       btn.classList.toggle("booked-btn-style");
-      // console.log(e.target.innerText);
       removeSeat(e.target.innerText);
       count--;
     } else if (count < 4) {
@@ -29,6 +28,9 @@ for (const btn of buttons) {
     if (count === 4) {
       b.classList.remove("btn", "btn-disabled");
       b.classList.add("green-btn-style");
+    } else{
+      b.classList.add("btn", "btn-disabled");
+      b.classList.remove("green-btn-style");
     }
     nextButtonValidation();
 
@@ -48,6 +50,9 @@ function nextButtonValidation() {
   if (count > 0 && !isNaN(num.value) && num.value.length === 11) {
     nb.classList.remove("btn", "btn-disabled");
     nb.classList.add("green-btn-style");
+  } else{
+    nb.classList.add("btn", "btn-disabled");
+    nb.classList.remove("green-btn-style");
   }
 }
 
@@ -70,7 +75,6 @@ function seatDetails(seatNumber) {
 }
 
 function removeSeat(seatNumber) {
-  console.log(seatNumber);
   const seats = document
     .getElementById("seat-detail")
     .querySelectorAll(".flex");
